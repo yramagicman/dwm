@@ -30,11 +30,11 @@ static const Rule rules[] = {
      *  WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-     { "Firefox",  NULL,       NULL,       2,            0,           -1 },
-     { "Surf",     NULL,       NULL,       2,            0,           -1 },
-     { "google-chrome-beta",     NULL,       NULL,       2,            0,           -1 },
-     { "Google-chrome-beta",     NULL,       NULL,       2,            0,           -1 },
-     { "st-256color",       NULL,       NULL,       1,            0,           -1 },
+     { "Firefox",  NULL,       NULL,       1,            0,           0 },
+     { "Surf",     NULL,       NULL,       1,            0,           0 },
+     { "google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
+     { "Google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
+     { "st-256color",       NULL,       NULL,       1,            0,           1 },
 };
 
 /* layout(s) */
@@ -94,8 +94,10 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
     { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-    { MODKEY,                       XK_o,      focusmon,       {.i = -1 } },
-    { MODKEY|ShiftMask,             XK_o,      tagmon,         {.i = -1 } },
+    { MODKEY,                       XK_h,      focusmon,       {.i = -1 } },
+    { MODKEY,                       XK_l,      focusmon,       {.i = +1 } },
+    { MODKEY|ShiftMask,             XK_h,      tagmon,         {.i = -1 } },
+    { MODKEY|ShiftMask,             XK_l,      tagmon,         {.i = +1 } },
     { ShiftMask,                    XK_F12,    spawn,          {.v = poweroff } },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
