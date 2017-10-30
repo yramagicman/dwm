@@ -33,9 +33,10 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
      { "Firefox",  NULL,       NULL,       1,            0,           0 },
      { "Surf",     NULL,       NULL,       1,            0,           0 },
+     { "Thunar",     NULL,       NULL,       2,            0,           1 },
+     { "st-256color",       NULL,       NULL,       1,            0,           1 },
      { "google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
      { "Google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
-     { "st-256color",       NULL,       NULL,       1,            0,           1 },
 };
 
 /* layout(s) */
@@ -68,7 +69,9 @@ static const char *passmenu[] = { "passmenu", "-p", "*>", "-fn", dmenufont, "-nb
 static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "surf", "duckduckgo.com" };
 static const char *chrome[]  = { "google-chrome", NULL};
+static const char *chrome_incognito[]  = { "google-chrome", "--incognito", NULL };
 static const char *firefox[]  = { "firefox", NULL};
+static const char *firefox_private[]  = { "firefox", "--private", NULL};
 static const char *printscreen[]  = { "xfce4-screenshooter", NULL};
 static const char *poweroff[]  = {"sudo", "systemctl", "poweroff"};
 
@@ -80,6 +83,8 @@ static Key keys[] = {
     { MODKEY,                       XK_w,      spawn,          {.v = browser } },
     { MODKEY,                       XK_g,      spawn,          {.v = chrome } },
     { MODKEY,                       XK_m,      spawn,          {.v = firefox } },
+    { MODKEY|ShiftMask,             XK_g,      spawn,          {.v = chrome_incognito } },
+    { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = firefox_private } },
     { ShiftMask,                    XK_Print,  spawn,          {.v = printscreen } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
