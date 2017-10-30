@@ -8,7 +8,8 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Inconsolata:size=11" };
 static const char dmenufont[]       = "Inconsolata:size=12";
 
-static const char border1[]         = "#d22d72";
+static const char border1[]         = "#5a7b8c";
+static const char border2[]         = "#d22d72";
 
 static const char background1[]     = "#161B1D";
 static const char background2[]     = "#5a7b8c";
@@ -17,8 +18,8 @@ static const char foreground1[]     = "#777777";
 static const char foreground2[]     = "#161B1D";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
-    [SchemeNorm] = { foreground1, background1, background1 },
-    [SchemeSel] =  { foreground2, background2,  border1  },
+    [SchemeNorm] = { foreground1, background1, border1 },
+    [SchemeSel] =  { foreground2, background2, border2  },
 };
 
 /* tagging */
@@ -81,18 +82,17 @@ static Key keys[] = {
     { MODKEY,                       XK_m,      spawn,          {.v = firefox } },
     { ShiftMask,                    XK_Print,  spawn,          {.v = printscreen } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
-    { MODKEY,                       XK_k,      focusstack,     {.i = +1 } },
-    { MODKEY,                       XK_j,      focusstack,     {.i = -1 } },
+    { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+    { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
     { MODKEY|ControlMask,           XK_j,      incnmaster,     {.i = +1 } },
     { MODKEY|ControlMask,           XK_k,      incnmaster,     {.i = -1 } },
     { MODKEY|ShiftMask,             XK_j,      setmfact,       {.f = -0.05} },
     { MODKEY|ShiftMask,             XK_k,      setmfact,       {.f = +0.05} },
-    { MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
+    { MODKEY,                       XK_space,  zoom,           {0} },
     { MODKEY,                       XK_Tab,    view,           {0} },
     { MODKEY,                       XK_q,      killclient,     {0} },
     { MODKEY,                       XK_e,      setlayout,      {.v = &layouts[0]} },
     { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                       XK_space,  setlayout,      {0} },
     { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
     { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
