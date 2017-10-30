@@ -68,6 +68,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *browser[]  = { "surf", "duckduckgo.com" };
 static const char *chrome[]  = { "google-chrome", NULL};
 static const char *firefox[]  = { "firefox", NULL};
+static const char *printscreen[]  = { "xfce4-screenshooter", NULL};
 static const char *poweroff[]  = {"sudo", "systemctl", "poweroff"};
 
 static Key keys[] = {
@@ -78,6 +79,7 @@ static Key keys[] = {
     { MODKEY,                       XK_w,      spawn,          {.v = browser } },
     { MODKEY,                       XK_g,      spawn,          {.v = chrome } },
     { MODKEY,                       XK_m,      spawn,          {.v = firefox } },
+    { ShiftMask,                    XK_Print,  spawn,          {.v = printscreen } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_k,      focusstack,     {.i = +1 } },
     { MODKEY,                       XK_j,      focusstack,     {.i = -1 } },
