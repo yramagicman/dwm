@@ -73,7 +73,14 @@ static const char *chrome_incognito[]  = { "google-chrome", "--incognito", NULL 
 static const char *firefox[]  = { "firefox", NULL};
 static const char *firefox_private[]  = { "firefox", "--private", NULL};
 static const char *printscreen[]  = { "xfce4-screenshooter", NULL};
-static const char *poweroff[]  = {"sudo", "systemctl", "poweroff"};
+static const char *poweroff[]  = {"sudo", "systemctl", "poweroff", NULL};
+static const char *volup[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1+", NULL };
+static const char *voldown[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1-", NULL };
+static const char *volmute[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "0", NULL };
+
+#define XF86AudioMute           0x1008ff12
+#define XF86AudioLowerVolume    0x1008ff11
+#define XF86AudioRaiseVolume    0x1008ff13
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -85,7 +92,7 @@ static Key keys[] = {
     { MODKEY,                       XK_m,      spawn,          {.v = firefox } },
     { MODKEY|ShiftMask,             XK_g,      spawn,          {.v = chrome_incognito } },
     { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = firefox_private } },
-    { ShiftMask,                    XK_Print,  spawn,          {.v = printscreen } },
+    { 0,                            XK_Print,  spawn,          {.v = printscreen } },
     { MODKEY,                       XK_b,      togglebar,      {0} },
     { MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
     { MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -116,6 +123,9 @@ static Key keys[] = {
     TAGKEYS(                        XK_8,                      7)
     TAGKEYS(                        XK_9,                      8)
     { MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    { 0,                            XF86AudioMute,  spawn,          {.v = volmute } },
+    { 0,                            XF86AudioRaiseVolume,  spawn,          {.v = volup } },
+    { 0,                            XF86AudioLowerVolume,  spawn,          {.v = voldown } },
 };
 
 /* button definitions */
