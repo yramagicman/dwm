@@ -33,7 +33,8 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
      { "Firefox",  NULL,       NULL,       1,            0,           0 },
      { "Surf",     NULL,       NULL,       1,            0,           0 },
-     { "Thunar",     NULL,       NULL,       2,            0,           1 },
+     { "Thunar",   NULL,       NULL,       2,            0,           1 },
+     { "krita",    NULL,       NULL,       5,            0,           0 },
      { "st-256color",       NULL,       NULL,       1,            0,           1 },
      { "google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
      { "Google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
@@ -48,7 +49,7 @@ static const Layout layouts[] = {
     /* symbol     arrange function */
     { "[]=",      tile },    /* first entry is default */
     { "[M]",      monocle },
-    // { "><>",      NULL },    /* no layout function means floating behavior */
+    { "><>",      NULL },    /* no layout function means floating behavior */
 };
 
 /* key definitions */
