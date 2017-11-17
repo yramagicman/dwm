@@ -8,14 +8,14 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Inconsolata:size=11" };
 static const char dmenufont[]       = "Inconsolata:size=12";
 
-static const char border1[]         = "#5a7b8c";
-static const char border2[]         = "#d22d72";
+static const char border1[]         = "#202620";
+static const char border2[]         = "#3d62f5";
 
-static const char background1[]     = "#161B1D";
-static const char background2[]     = "#5a7b8c";
+static const char background1[]     = "#131513";
+static const char background2[]     = "#202620";
 
-static const char foreground1[]     = "#777777";
-static const char foreground2[]     = "#161B1D";
+static const char foreground1[]     = "#8ca68c";
+static const char foreground2[]     = "#f0fff0";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { foreground1, background1, border1 },
