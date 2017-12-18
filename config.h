@@ -78,6 +78,7 @@ static const char *poweroff[]  = {"sudo", "systemctl", "poweroff", NULL};
 static const char *volup[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1+", NULL };
 static const char *voldown[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1-", NULL };
 static const char *volmute[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "0", NULL };
+static const char *killscreensaver[]  = {"pkill", "xscreensaver", NULL };
 
 #define XF86AudioMute           0x1008ff12
 #define XF86AudioLowerVolume    0x1008ff11
@@ -114,6 +115,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,             XK_h,      tagmon,         {.i = -1 } },
     { MODKEY|ShiftMask,             XK_l,      tagmon,         {.i = +1 } },
     { ShiftMask,                    XK_F12,    spawn,          {.v = poweroff } },
+    { 0,                            XK_F8,     spawn,          {.v = killscreensaver } },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
