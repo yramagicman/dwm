@@ -36,6 +36,8 @@ static const Rule rules[] = {
      { "Thunar",   NULL,       NULL,       2,            0,           1 },
      { "krita",    NULL,       NULL,       5,            0,           0 },
      { "st-256color",       NULL,       NULL,       1,            0,           1 },
+     { "urxvt-256color",       NULL,       NULL,       1,            0,           1 },
+     { "URxvt",       NULL,       NULL,       1,            0,           1 },
      { "google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
      { "Google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
 };
