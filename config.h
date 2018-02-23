@@ -40,6 +40,8 @@ static const Rule rules[] = {
      { "URxvt",       NULL,       NULL,       1,            0,           1 },
      { "google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
      { "Google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
+     {"chromium-browser",        NULL,       NULL,       2,            0,           0 },
+     { "Chromium-browser",       NULL,       NULL,       2,            0,           0 },
 };
 
 /* layout(s) */
@@ -71,8 +73,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-p", ">>", "-fn", dmenufont, "-n
 static const char *passmenu[] = { "passmenu", "-p", "*>", "-fn", dmenufont, "-nb", background1, "-nf", foreground1, "-sb", background2, "-sf", foreground2, "-l", "20", NULL };
 static const char *termcmd[]  = { "/home/jonathan/bin/termcmd", NULL };
 static const char *browser[]  = { "surf", "duckduckgo.com" };
-static const char *chrome[]  = { "google-chrome", NULL};
-static const char *chrome_incognito[]  = { "google-chrome", "--incognito", NULL };
+static const char *chrome[]  = { "chromium", NULL};
+static const char *chrome_incognito[]  = { "chromium", "--incognito", NULL };
 static const char *firefox[]  = { "firefox", NULL};
 static const char *firefox_private[]  = { "firefox", "-private-window", NULL};
 static const char *printscreen[]  = { "xfce4-screenshooter", NULL};
