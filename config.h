@@ -30,18 +30,17 @@ static const Rule rules[] = {
      *  WM_CLASS(STRING) = instance, class
      *  WM_NAME(STRING) = title
      */
-    /* class      instance    title       tags mask     isfloating   monitor */
-     { "Firefox",  NULL,       NULL,       1,            0,           0 },
-     { "Surf",     NULL,       NULL,       1,            0,           0 },
-     { "Thunar",   NULL,       NULL,       2,            0,           1 },
-     { "krita",    NULL,       NULL,       5,            0,           0 },
-     { "st-256color",       NULL,       NULL,       1,            0,           1 },
-     { "urxvt-256color",       NULL,       NULL,       1,            0,           1 },
-     { "URxvt",       NULL,       NULL,       1,            0,           1 },
-     { "google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
-     { "Google-chrome-beta",     NULL,       NULL,       2,            0,           0 },
-     {"chromium-browser",        NULL,       NULL,       2,            0,           0 },
-     { "Chromium-browser",       NULL,       NULL,       2,            0,           0 },
+/*  class                  instance  title  tags mask  isfloating  monitor */
+{   "Firefox",             NULL,     NULL,  1,         0,          0     },
+{   "Surf",                NULL,     NULL,  1,         0,          0     },
+{   "Thunar",              NULL,     NULL,  2,         0,          1     },
+{   "krita",               NULL,     NULL,  5,         0,          0     },
+{   "st-256color",         NULL,     NULL,  1,         0,          1     },
+{   "urxvt-256color",      NULL,     NULL,  1,         0,          1     },
+{   "URxvt",               NULL,     NULL,  1,         0,          1     },
+{   "Google-chrome-beta",  NULL,     NULL,  2,         0,          0     },
+{   "Chromium-browser",    NULL,     NULL,  2,         0,          0     },
+{   "Thunderbird",         NULL,     NULL,  5,         0,          0     },
 };
 
 /* layout(s) */
