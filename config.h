@@ -32,6 +32,7 @@ static const Rule rules[] = {
      */
 /*  class                  instance  title  tags mask  isfloating  monitor */
 {   "Firefox",             NULL,     NULL,  1,         0,          0     },
+{   "firefox",             NULL,     NULL,  1,         0,          0     },
 {   "Surf",                NULL,     NULL,  1,         0,          0     },
 {   "Thunar",              NULL,     NULL,  2,         0,          1     },
 {   "krita",               NULL,     NULL,  5,         0,          0     },
@@ -40,7 +41,11 @@ static const Rule rules[] = {
 {   "URxvt",               NULL,     NULL,  1,         0,          1     },
 {   "Google-chrome-beta",  NULL,     NULL,  2,         0,          0     },
 {   "Chromium-browser",    NULL,     NULL,  2,         0,          0     },
+{   "chromium-browser",    NULL,     NULL,  2,         0,          0     },
+{   "Chromium",            NULL,     NULL,  2,         0,          0     },
+{   "chromium",            NULL,     NULL,  2,         0,          0     },
 {   "Thunderbird",         NULL,     NULL,  5,         0,          0     },
+{   "thunderbird",         NULL,     NULL,  5,         0,          0     },
 };
 
 /* layout(s) */
