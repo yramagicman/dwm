@@ -8,14 +8,14 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Inconsolata:size=11" };
 static const char dmenufont[]       = "Inconsolata:size=12";
 
-static const char border1[]         = "#202620";
-static const char border2[]         = "#3d62f5";
+static const char border1[]         = "#555753";
+static const char border2[]         = "#729fcf";
 
-static const char background1[]     = "#131513";
-static const char background2[]     = "#202620";
+static const char background1[]     = "#2b2b2b";
+static const char background2[]     = "#555753";
 
-static const char foreground1[]     = "#8ca68c";
-static const char foreground2[]     = "#f0fff0";
+static const char foreground1[]     = "#d3d7cf";
+static const char foreground2[]     = "#eeeeec";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { foreground1, background1, border1 },
@@ -31,21 +31,24 @@ static const Rule rules[] = {
      *  WM_NAME(STRING) = title
      */
 /*  class                  instance  title  tags mask  isfloating  monitor */
-{   "Firefox",             NULL,     NULL,  1,         0,          0     },
-{   "firefox",             NULL,     NULL,  1,         0,          0     },
-{   "Surf",                NULL,     NULL,  1,         0,          0     },
 {   "Thunar",              NULL,     NULL,  2,         0,          1     },
-{   "krita",               NULL,     NULL,  5,         0,          0     },
 {   "st-256color",         NULL,     NULL,  1,         0,          1     },
 {   "urxvt-256color",      NULL,     NULL,  1,         0,          1     },
 {   "URxvt",               NULL,     NULL,  1,         0,          1     },
-{   "Google-chrome-beta",  NULL,     NULL,  2,         0,          0     },
+{   "Firefox",             NULL,     NULL,  1,         0,          0     },
+{   "firefox",             NULL,     NULL,  1,         0,          0     },
+{   "Surf",                NULL,     NULL,  1,         0,          0     },
+{   "krita",               NULL,     NULL,  5,         0,          0     },
+{   "Google-chrome",       NULL,     NULL,  2,         0,          0     },
+{   "google-chrome",       NULL,     NULL,  2,         0,          0     },
 {   "Chromium-browser",    NULL,     NULL,  2,         0,          0     },
 {   "chromium-browser",    NULL,     NULL,  2,         0,          0     },
 {   "Chromium",            NULL,     NULL,  2,         0,          0     },
 {   "chromium",            NULL,     NULL,  2,         0,          0     },
 {   "Thunderbird",         NULL,     NULL,  5,         0,          0     },
 {   "thunderbird",         NULL,     NULL,  5,         0,          0     },
+{   "Slack",               NULL,     NULL,  1 << 8,    0,          1     },
+{   "slack",               NULL,     NULL,  1 << 8,    0,          1     },
 };
 
 /* layout(s) */
@@ -82,16 +85,20 @@ static const char *chrome_incognito[]  = { "chromium", "--incognito", NULL };
 static const char *firefox[]  = { "firefox", NULL};
 static const char *firefox_private[]  = { "firefox", "-private-window", NULL};
 static const char *printscreen[]  = { "xfce4-screenshooter", NULL};
-static const char *poweroff[]  = {"sudo", "systemctl", "poweroff", NULL};
-static const char *reboot[]  = {"sudo", "systemctl", "reboot", NULL};
+static const char *poweroff[]  = { "systemctl", "poweroff", NULL};
+static const char *reboot[]  = { "systemctl", "reboot", NULL};
 static const char *volup[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1+", NULL };
 static const char *voldown[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1-", NULL };
 static const char *volmute[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "0", NULL };
+static const char *brightup[]  = { "/home/jonathan/bin/brightup", NULL };
+static const char *brightdown[]  = { "/home/jonathan/bin/brightdown", NULL };
 static const char *killscreensaver[]  = {"pkill", "xscreensaver", NULL };
 
 #define XF86AudioMute           0x1008ff12
 #define XF86AudioLowerVolume    0x1008ff11
 #define XF86AudioRaiseVolume    0x1008ff13
+#define XF86MonBrightnessUp     0x1008ff02
+#define XF86MonBrightnessDown    0x1008ff03
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -139,6 +146,8 @@ static Key keys[] = {
     { 0,                            XF86AudioMute,  spawn,          {.v = volmute } },
     { 0,                            XF86AudioRaiseVolume,  spawn,          {.v = volup } },
     { 0,                            XF86AudioLowerVolume,  spawn,          {.v = voldown } },
+    { 0,                            XF86MonBrightnessUp,   spawn,          {.v = brightup } },
+    { 0,                            XF86MonBrightnessDown, spawn,          {.v = brightdown } },
 };
 
 /* button definitions */
