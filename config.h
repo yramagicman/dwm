@@ -39,8 +39,6 @@ static const Rule rules[] = {
 {   "firefox",             NULL,     NULL,  1,         0,          0     },
 {   "Surf",                NULL,     NULL,  1,         0,          0     },
 {   "krita",               NULL,     NULL,  5,         0,          0     },
-{   "Google-chrome",       NULL,     NULL,  2,         0,          0     },
-{   "google-chrome",       NULL,     NULL,  2,         0,          0     },
 {   "Chromium-browser",    NULL,     NULL,  2,         0,          0     },
 {   "chromium-browser",    NULL,     NULL,  2,         0,          0     },
 {   "Chromium",            NULL,     NULL,  2,         0,          0     },
