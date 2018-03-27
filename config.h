@@ -47,6 +47,8 @@ static const Rule rules[] = {
 {   "thunderbird",         NULL,     NULL,  5,         0,          0     },
 {   "Slack",               NULL,     NULL,  1 << 8,    0,          1     },
 {   "slack",               NULL,     NULL,  1 << 8,    0,          1     },
+{   "Wire",                NULL,     NULL,  1 << 8,    0,          1     },
+{   "wire",                NULL,     NULL,  1 << 8,    0,          1     },
 };
 
 /* layout(s) */
@@ -92,11 +94,11 @@ static const char *brightup[]  = { "/home/jonathan/.dwm/scripts/brightup", NULL 
 static const char *brightdown[]  = { "/home/jonathan/.dwm/scripts/brightdown", NULL };
 static const char *killscreensaver[]  = {"pkill", "xscreensaver", NULL };
 
-#define XF86AudioMute           0x1008ff12
-#define XF86AudioLowerVolume    0x1008ff11
-#define XF86AudioRaiseVolume    0x1008ff13
-#define XF86MonBrightnessUp     0x1008ff02
-#define XF86MonBrightnessDown    0x1008ff03
+#define  XF86AudioMute          0x1008ff12
+#define  XF86AudioLowerVolume   0x1008ff11
+#define  XF86AudioRaiseVolume   0x1008ff13
+#define  XF86MonBrightnessUp    0x1008ff02
+#define  XF86MonBrightnessDown  0x1008ff03
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
