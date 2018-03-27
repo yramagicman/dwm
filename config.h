@@ -76,20 +76,20 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-p", ">>", "-fn", dmenufont, "-nb", background1, "-nf", foreground1, "-sb", background2, "-sf", foreground2, "-l", "20", NULL };
 static const char *passmenu[] = { "passmenu", "-p", "*>", "-fn", dmenufont, "-nb", background1, "-nf", foreground1, "-sb", background2, "-sf", foreground2, "-l", "20", NULL };
-static const char *termcmd[]  = { "/home/jonathan/bin/termcmd", NULL };
+static const char *termcmd[]  = { "/home/jonathan/.dwm/scripts/termcmd", NULL };
 static const char *browser[]  = { "surf", "duckduckgo.com" };
 static const char *chrome[]  = { "chromium", NULL};
 static const char *chrome_incognito[]  = { "chromium", "--incognito", NULL };
 static const char *firefox[]  = { "firefox", NULL};
 static const char *firefox_private[]  = { "firefox", "-private-window", NULL};
-static const char *printscreen[]  = { "xfce4-screenshooter", NULL};
+static const char *printscreen[]  = { "/home/jonathan/.dwm/scripts/screenshot", NULL};
 static const char *poweroff[]  = { "systemctl", "poweroff", NULL};
 static const char *reboot[]  = { "systemctl", "reboot", NULL};
 static const char *volup[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1+", NULL };
 static const char *voldown[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "1-", NULL };
 static const char *volmute[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",  "0", NULL };
-static const char *brightup[]  = { "/home/jonathan/bin/brightup", NULL };
-static const char *brightdown[]  = { "/home/jonathan/bin/brightdown", NULL };
+static const char *brightup[]  = { "/home/jonathan/.dwm/scripts/brightup", NULL };
+static const char *brightdown[]  = { "/home/jonathan/.dwm/scripts/brightdown", NULL };
 static const char *killscreensaver[]  = {"pkill", "xscreensaver", NULL };
 
 #define XF86AudioMute           0x1008ff12
