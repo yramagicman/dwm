@@ -1,14 +1,14 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Inconsolata:size=11" };
 static const char dmenufont[]       = "Inconsolata:size=12";
 
-static const char border1[]         = "#555753";
+static const char border1[]         = "#2b2b2b";
 static const char border2[]         = "#729fcf";
 
 static const char background1[]     = "#2b2b2b";
@@ -30,25 +30,25 @@ static const Rule rules[] = {
      *  WM_CLASS(STRING) = instance, class
      *  WM_NAME(STRING) = title
      */
-/*  class                  instance  title  tags mask  isfloating  monitor */
-{   "Thunar",              NULL,     NULL,  2,         0,          1     },
-{   "st-256color",         NULL,     NULL,  1,         0,          1     },
-{   "urxvt-256color",      NULL,     NULL,  1,         0,          1     },
-{   "URxvt",               NULL,     NULL,  1,         0,          1     },
-{   "Firefox",             NULL,     NULL,  1,         0,          0     },
-{   "firefox",             NULL,     NULL,  1,         0,          0     },
-{   "Surf",                NULL,     NULL,  1,         0,          0     },
-{   "krita",               NULL,     NULL,  5,         0,          0     },
-{   "Chromium-browser",    NULL,     NULL,  2,         0,          0     },
-{   "chromium-browser",    NULL,     NULL,  2,         0,          0     },
-{   "Chromium",            NULL,     NULL,  2,         0,          0     },
-{   "chromium",            NULL,     NULL,  2,         0,          0     },
-{   "Thunderbird",         NULL,     NULL,  5,         0,          0     },
-{   "thunderbird",         NULL,     NULL,  5,         0,          0     },
-{   "Slack",               NULL,     NULL,  1 << 8,    0,          1     },
-{   "slack",               NULL,     NULL,  1 << 8,    0,          1     },
-{   "Wire",                NULL,     NULL,  1 << 8,    0,          1     },
-{   "wire",                NULL,     NULL,  1 << 8,    0,          1     },
+    /*  class                  instance  title  tags mask  isfloating  monitor */
+    {   "Thunar",              NULL,     NULL,  2,         0,          1     },
+    {   "st-256color",         NULL,     NULL,  1,         0,          1     },
+    {   "urxvt-256color",      NULL,     NULL,  1,         0,          1     },
+    {   "URxvt",               NULL,     NULL,  1,         0,          1     },
+    {   "Firefox",             NULL,     NULL,  1,         0,          0     },
+    {   "firefox",             NULL,     NULL,  1,         0,          0     },
+    {   "Surf",                NULL,     NULL,  1,         0,          0     },
+    {   "krita",               NULL,     NULL,  5,         0,          0     },
+    {   "Chromium-browser",    NULL,     NULL,  2,         0,          0     },
+    {   "chromium-browser",    NULL,     NULL,  2,         0,          0     },
+    {   "Chromium",            NULL,     NULL,  2,         0,          0     },
+    {   "chromium",            NULL,     NULL,  2,         0,          0     },
+    {   "Thunderbird",         NULL,     NULL,  5,         0,          0     },
+    {   "thunderbird",         NULL,     NULL,  5,         0,          0     },
+    {   "Slack",               NULL,     NULL,  1 << 8,    0,          1     },
+    {   "slack",               NULL,     NULL,  1 << 8,    0,          1     },
+    {   "Wire",                NULL,     NULL,  1 << 8,    0,          1     },
+    {   "wire",                NULL,     NULL,  1 << 8,    0,          1     },
 };
 
 /* layout(s) */
