@@ -63,6 +63,7 @@ static const Layout layouts[] = {
     // { "><>",      NULL },    /* no layout function means floating behavior */
 };
 
+
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
@@ -93,6 +94,8 @@ static const char *volmute[]  = { "amixer", "-c", "0",  "--",  "set",  "Master",
 static const char *brightup[]  = { "/home/jonathan/.dwm/scripts/brightup", NULL };
 static const char *brightdown[]  = { "/home/jonathan/.dwm/scripts/brightdown", NULL };
 static const char *killscreensaver[]  = {"pkill", "xscreensaver", NULL };
+static const char *killmon[]  = {"mons", "-o", "HDMI1", "--off", NULL };
+static const char *attachmon[]  = {"/home/jonathan/.screenlayout/work.sh", NULL};
 
 #define  XF86AudioMute          0x1008ff12
 #define  XF86AudioLowerVolume   0x1008ff11
@@ -133,6 +136,8 @@ static Key keys[] = {
     { ShiftMask,                    XK_F12,    spawn,          {.v = poweroff } },
     { ControlMask|ShiftMask,        XK_F12,    spawn,          {.v = reboot } },
     { 0,                            XK_F8,     spawn,          {.v = killscreensaver } },
+    { 0,                            XK_F10,    spawn,          {.v = killmon } },
+    { 0,                            XK_F11,    spawn,          {.v = attachmon } },
     TAGKEYS(                        XK_1,                      0)
     TAGKEYS(                        XK_2,                      1)
     TAGKEYS(                        XK_3,                      2)
