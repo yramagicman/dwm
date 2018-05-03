@@ -8,14 +8,14 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Inconsolata:size=11" };
 static const char dmenufont[]       = "Inconsolata:size=12";
 
-static const char border1[]         = "#2b2b2b";
-static const char border2[]         = "#729fcf";
+static const char border1[]         = "#090908";
+static const char border2[]         = "#d09d3f";
 
-static const char background1[]     = "#2b2b2b";
-static const char background2[]     = "#555753";
+static const char background1[]     = "#090908";
+static const char background2[]     = "#101110";
 
-static const char foreground1[]     = "#d3d7cf";
-static const char foreground2[]     = "#eeeeec";
+static const char foreground1[]     = "#848981";
+static const char foreground2[]     = "#d09d3f";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { foreground1, background1, border1 },
@@ -43,8 +43,8 @@ static const Rule rules[] = {
     {   "chromium-browser",    NULL,     NULL,  2,         0,          0     },
     {   "Chromium",            NULL,     NULL,  2,         0,          0     },
     {   "chromium",            NULL,     NULL,  2,         0,          0     },
-    {   "Thunderbird",         NULL,     NULL,  5,         0,          0     },
-    {   "thunderbird",         NULL,     NULL,  5,         0,          0     },
+    {   "Thunderbird",         NULL,     NULL,  1 << 2,    0,          0     },
+    {   "thunderbird",         NULL,     NULL,  1 << 2,    0,          0     },
     {   "Slack",               NULL,     NULL,  1 << 8,    0,          1     },
     {   "slack",               NULL,     NULL,  1 << 8,    0,          1     },
     {   "Wire",                NULL,     NULL,  1 << 8,    0,          1     },
