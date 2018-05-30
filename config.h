@@ -8,7 +8,7 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Inconsolata:size=11" };
 static const char dmenufont[]       = "Inconsolata:size=12";
 
-static const char border1[]         = "#000000";
+static const char border1[]         = "#555555";
 static const char border2[]         = "#b544ee";
 
 static const char background1[]     = "#000000";
